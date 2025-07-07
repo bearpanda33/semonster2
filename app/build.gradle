@@ -7,10 +7,12 @@ plugins {
 }
 
 dependencies {
-    implementation("org.apache.commons:commons-text")
-    implementation(project(":utilities"))
-}
+    // JUnit4ライブラリを直接指定
+    testImplementation 'junit:junit:4.13.2'
 
+    // Guavaライブラリを直接指定
+    implementation 'com.google.guava:guava:32.1.3-jre'
+}
 application {
     // Define the main class for the application.
     mainClass = "org.example.app.App"
