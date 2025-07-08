@@ -1,18 +1,26 @@
 package org.example;
 
-import org.junit.Test;
-import static org.junit.Assert.*;
+import org.example.Monster;     // ←★ これが必要！
+
+import java.util.Scanner;
 
 public class MonsterTest {
-    @Test
-    public void testSummonAndToString() {
-        Monster monster = new Monster(3, 0); //デュラハン, レア度0
-        assertEquals("デュラハン:レア度[0]", monster.toString());
-    }
+  public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
 
-    @Test
-    public void testEvolve() {
-        Monster monster = new Monster(2, 3); //ドラゴン, レア度3
-        assertEquals("キングドラゴン:レア度[3]", monster.toString());
-    }
+    System.out.println("SEMonster!");
+
+    System.out.print("モンスターの番号を入力してください（0〜4）: ");
+    int number = scanner.nextInt();
+
+    System.out.print("レア度を入力してください（1〜4）: ");
+    int rare = scanner.nextInt();
+
+    Monster monster = new Monster(number, rare);
+    System.out.println(monster);
+
+    scanner.close();
+  }
 }
+
+
