@@ -7,7 +7,7 @@ public class Player {
     ArrayList<Monster> monsterDeck = new ArrayList<>();
     int hp = 100;
 
-    Player(String name) {
+    public Player(String name) {
         this.name = name;
         drawMonsters(8); // デッキのモンスターを8体に
     }
@@ -19,12 +19,25 @@ public class Player {
         }
     }
 
+    public String getName() {
+        return this.name;
+    }
+
+    public int getHP() {
+        return this.hp;
+    }
+
+    public ArrayList<Monster> getDeck() {
+        return this.monsterDeck;
+    }
+
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("Deck:" + this.name + " HP:" + this.hp + "\n");
+        sb.append("Deck:").append(this.name).append(" HP:").append(this.hp).append("\n");
         for (Monster m : this.monsterDeck) {
-            sb.append(m.toString() + "\n");
+            sb.append(m.toString()).append("\n");
         }
         return sb.toString();
     }
