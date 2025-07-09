@@ -10,6 +10,7 @@ public class PlayerTest {
         assertEquals(8, player.monsterDeck.size());
     }
 
+    
     @Test
     public void testPlayerToString() {
         Player player = new Player("Test Player");
