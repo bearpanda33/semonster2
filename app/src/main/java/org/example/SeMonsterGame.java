@@ -1,3 +1,4 @@
+// SeMonsterGameクラス：プレイヤーを管理し、カードを引く処理を提供する
 package org.example;
 
 import java.util.HashMap;
@@ -14,6 +15,7 @@ public class SeMonsterGame {
         this.playerMap.put(playerName, new Player(playerName));
     }
 
+
     public void draw(String playerName) {
         Player player = this.playerMap.get(playerName);
         if (player != null) {
@@ -23,7 +25,6 @@ public class SeMonsterGame {
         }
     }
 
-    
     // 🔽 テストや確認用にプレイヤーを返す getter（オプション）
     public Player getPlayer(String playerName) {
         return this.playerMap.get(playerName);
