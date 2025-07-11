@@ -1,3 +1,4 @@
+// SeMonsterGameTestクラス：プレイヤーの追加とdrawの動作をテストする
 package org.example;
 
 import org.junit.Test;

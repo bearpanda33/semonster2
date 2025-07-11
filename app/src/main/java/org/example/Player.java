@@ -2,6 +2,7 @@ package org.example;
 import java.util.ArrayList;
 import java.util.Random;
 
+// プレイヤークラス：名前、HP、デッキの管理を行う
 public class Player {
     String name;
     ArrayList<Monster> monsterDeck = new ArrayList<>();
@@ -12,6 +13,7 @@ public class Player {
         drawMonsters(8); // デッキのモンスターを8体に
     }
 
+
     public void drawMonsters(int count) {
         Random rand = new Random();
         for (int i = 0; i < count; i++) {
@@ -19,7 +21,6 @@ public class Player {
         }
     }
 
-    
     public String getName() {
         return this.name;
     }
